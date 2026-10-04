@@ -19,7 +19,7 @@ research log) is private; the excerpts here are unchanged apart from removed pat
 | 3 | **Survivorship bias.** The 105 stocks were chosen knowing which companies survived. | Long the list, short the market, no model: +6.9% a year, Sharpe 1.22, t = 6.3 (1996–2023). | Any signal is measured against this bar, not against zero. |
 | 4 | **Tails deleted.** A cleaning step dropped every bar more than 3σ from its moving average. | 14,598 real price moves — crisis days, earnings days, overnight gaps. | 98–99% of the dropped moves persisted afterwards, so they were real, not bad ticks. |
 | 5 | **Wrong model type.** Three-class targets (−1/0/1) were inferred as regression. | 308 models trained and scored by R². | Target type is now read from the target registry, not guessed from the values. |
-| 6 | **What costs really are.** | 63% of friction was per-share commission; with it removed, the book turns positive and still trails buy-and-hold fourfold. | Cost model decomposed term by term. |
+| 6 | **Commission priced on the wrong price.** The per-share fee ($0.0035) was computed on Yahoo's *adjusted* close, which is split- and dividend-adjusted backwards — on old bars far below the price actually traded (Apple 2013: 32×). | Commission per round trip overstated ~5× (9.7 bp vs 2.0 bp on 363k bars matched to traded prices; 6× for 1996–2005); its share of friction falls from the 63% first reported to ≤ 38%. The negative headline survives: even a commission-free book trailed buy-and-hold fourfold. | Re-priced against unadjusted Quandl WIKI prices; known-answer control — Apple's 7:1 and 4:1 splits must give a price ratio of 28–34 (measured 32.5). |
 
 ## How the work is verified
 
