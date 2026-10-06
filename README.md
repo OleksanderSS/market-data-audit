@@ -23,6 +23,8 @@ research log) is private; the excerpts here are unchanged apart from removed pat
 
 ## Audits of other people's backtests
 
+**I audit backtests for others** — what I check, what I need and prices: [SERVICE.md](SERVICE.md).
+
 The same instruments, applied to public code. Each case is pre-registered, reports every notebook or strategy it read (not only the broken ones), and counts a defect only with a measured effect.
 
 | Case | Repository | Headline |
