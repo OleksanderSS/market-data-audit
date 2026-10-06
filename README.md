@@ -28,6 +28,7 @@ The same instruments, applied to public code. Each case is pre-registered, repor
 | Case | Repository | Headline |
 |---|---|---|
 | [1](audits/case-01-stock-prediction-models.md) | huseinzol05/Stock-Prediction-Models (9.5k stars) | 24 trading agents all trained and scored on one year of GOOG (+33.4% buy-and-hold). The measured agent: +36.4% on that year, −2.5% on the 98 sessions it never saw (buy-and-hold −2.0%). |
+| [2](audits/case-02-finrl-ticker-list.md) | AI4Finance-Foundation/FinRL (16.5k stars) | Trains on 2014–2025 with the Dow's membership of November 2024. The list alone beats the index as it was by +4.48 points a year (a lower bound), in 10 of 12 years. |
 
 ## How the work is verified
 
