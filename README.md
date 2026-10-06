@@ -21,6 +21,14 @@ research log) is private; the excerpts here are unchanged apart from removed pat
 | 5 | **Wrong model type.** Three-class targets (−1/0/1) were inferred as regression. | 308 models trained and scored by R². | Target type is now read from the target registry, not guessed from the values. |
 | 6 | **Commission priced on the wrong price.** The per-share fee ($0.0035) was computed on Yahoo's *adjusted* close, which is split- and dividend-adjusted backwards — on old bars far below the price actually traded (Apple 2013: 32×). | Commission per round trip overstated ~5× (9.7 bp vs 2.0 bp on 363k bars matched to traded prices; 6× for 1996–2005); its share of friction falls from the 63% first reported to ≤ 38%. The negative headline survives: even a commission-free book trailed buy-and-hold fourfold. | Re-priced against unadjusted Quandl WIKI prices; known-answer control — Apple's 7:1 and 4:1 splits must give a price ratio of 28–34 (measured 32.5). |
 
+## Audits of other people's backtests
+
+The same instruments, applied to public code. Each case is pre-registered, reports every notebook or strategy it read (not only the broken ones), and counts a defect only with a measured effect.
+
+| Case | Repository | Headline |
+|---|---|---|
+| [1](audits/case-01-stock-prediction-models.md) | huseinzol05/Stock-Prediction-Models (9.5k stars) | 24 trading agents all trained and scored on one year of GOOG (+33.4% buy-and-hold). The measured agent: +36.4% on that year, −2.5% on the 98 sessions it never saw (buy-and-hold −2.0%). |
+
 ## How the work is verified
 
 - **Pre-registration.** Before any measurement that could move a threshold, the rule, the forecast and a
