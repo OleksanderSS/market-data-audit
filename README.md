@@ -32,13 +32,19 @@ The same instruments, applied to public code. Each case is pre-registered, repor
 | [1](audits/case-01-stock-prediction-models.md) | huseinzol05/Stock-Prediction-Models (9.5k stars) | 24 trading agents all trained and scored on one year of GOOG (+33.4% buy-and-hold). The measured agent: +36.4% on that year, −2.5% on the 98 sessions it never saw (buy-and-hold −2.0%). |
 | [2](audits/case-02-finrl-ticker-list.md) | AI4Finance-Foundation/FinRL (16.5k stars) | Trains on 2014–2025 with the Dow's membership of November 2024. The list alone beats the index as it was by +4.48 points a year (a lower bound), in 10 of 12 years. |
 
+## Studies
+
+| Study | Headline |
+|---|---|
+| [Prediction-market calibration](prediction_markets/README.md) | Long shots priced 2–15 cents a week before close win 5.0% of the time at a price of 6.2% on Polymarket (real money, 1,102 contracts, clustered z +1.92) and 5.1% at 6.5% on Manifold (play money, z +1.93): the favourite–longshot bias, the same size on both. Pre-registered, four known-answer controls. |
+
 ## How the work is verified
 
 - **Pre-registration.** Before any measurement that could move a threshold, the rule, the forecast and a
   known-answer control are committed to the instrument file. The commit hash proves the order.
 - **Known-answer controls.** Every instrument runs beside a case whose answer is known; a control that only
   just passes is counted as failed.
-- **Nightly gate.** An unattended run every night: 889 contract tests, a ratchet that fails on any new unit-test
+- **Nightly gate.** An unattended run every night: 918 contract tests, a ratchet that fails on any new unit-test
   failure, collection health for each data source, and a morning report.
 - **Own forecasts are scored.** Each predicted effect size is written down first and scored afterwards; on
   the latest day 5 of 9 were right, and every miss on size underestimated the leak.
