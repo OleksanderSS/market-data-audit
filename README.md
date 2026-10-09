@@ -36,6 +36,7 @@ The same instruments, applied to public code. Each case is pre-registered, repor
 
 | Study | Headline |
 |---|---|
+| [Today's S&P 500 list, backtested](survivorship/sp500-todays-list.md) | A backtest on today's 503 members beats the index as it was (dead members included) by **+5.1 points a year in 2018–2026 and +5.6 in 2013–2017** (t 6.8 and 5.6, every year). Split: the list knows the winners (+3.1 / +5.4) and skips the index's turnover (+2.0 / +0.2). Pre-registered, four known-answer controls; a first attempt's failed mirror is reported, not hidden. |
 | [Prediction-market calibration](prediction_markets/README.md) | Long shots priced 2–15 cents a week before close win 5.0% of the time at a price of 6.2% on Polymarket (real money, 1,102 contracts, clustered z +1.92) and 5.1% at 6.5% on Manifold (play money, z +1.93): the favourite–longshot bias, the same size on both. Pre-registered, four known-answer controls. |
 
 ## How the work is verified

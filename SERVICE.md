@@ -10,7 +10,7 @@ backtest stands on.**
 | Family | What goes wrong | Example from my own pipeline or a public case |
 |---|---|---|
 | **Look-ahead in time stamps** | A date without a time of day lets the model see a filing, a news item or a bar before the market could | 46% of SEC filing facts were visible before EDGAR accepted them ([finding 1](README.md)) |
-| **Survivorship in the universe** | Today's index list tested on the past is a list of winners | FinRL's Dow 30 list earns **+4.48 points a year** over the real index by itself ([case 2](audits/case-02-finrl-ticker-list.md)) |
+| **Survivorship in the universe** | Today's index list tested on the past is a list of winners | FinRL's Dow 30 list earns **+4.48 points a year** over the real index by itself ([case 2](audits/case-02-finrl-ticker-list.md)); today's S&P 500 list, **+5.1 to +5.6** ([study](survivorship/sp500-todays-list.md)) |
 | **Survivorship in the source** | Free data sources drop dead companies entirely | Yahoo no longer serves a single day of Walgreens, a Dow member 2018–2024 |
 | **Training = testing** | The strategy is scored on the period it was fitted to | 24 agents trained and scored on one year of GOOG; out of sample the "profit" disappears ([case 1](audits/case-01-stock-prediction-models.md)) |
 | **Costs on the wrong price** | Commission or slippage priced on adjusted prices, or not at all | Commission overstated 5× on adjusted closes ([finding 6](README.md)) |
