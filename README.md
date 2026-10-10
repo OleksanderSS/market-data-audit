@@ -31,6 +31,7 @@ The same instruments, applied to public code. Each case is pre-registered, repor
 |---|---|---|
 | [1](audits/case-01-stock-prediction-models.md) | huseinzol05/Stock-Prediction-Models (9.5k stars) | 24 trading agents all trained and scored on one year of GOOG (+33.4% buy-and-hold). The measured agent: +36.4% on that year, −2.5% on the 98 sessions it never saw (buy-and-hold −2.0%). |
 | [2](audits/case-02-finrl-ticker-list.md) | AI4Finance-Foundation/FinRL (16.5k stars) | Trains on 2014–2025 with the Dow's membership of November 2024. The list alone beats the index as it was by +4.48 points a year (a lower bound), in 10 of 12 years. |
+| [3](audits/case-03-ml4t-data-claims.md) | stefan-jansen/machine-learning-for-trading (21.3k stars) | Two data claims tested. WIKI prices "survivorship-bias free": **holds** — a company that died is held 0.85 times as often as one that lived. Restated SEC facts "dated to the later document": **not for income numbers** — 92% come from a later filing than their date, 2.6% with a different figure (AT&T revenue −22%, Tesla net income +23%). Neither changes a published result: no case study trades that panel. |
 
 ## Studies
 
