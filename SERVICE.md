@@ -13,6 +13,7 @@ backtest stands on.**
 | **Survivorship in the universe** | Today's index list tested on the past is a list of winners | FinRL's Dow 30 list earns **+4.48 points a year** over the real index by itself ([case 2](audits/case-02-finrl-ticker-list.md)); today's S&P 500 list, **+5.1 to +5.6** ([study](survivorship/sp500-todays-list.md)) |
 | **Survivorship in the source** | Free data sources drop dead companies entirely | Yahoo no longer serves a single day of Walgreens, a Dow member 2018–2024 |
 | **Training = testing** | The strategy is scored on the period it was fitted to | 24 agents trained and scored on one year of GOOG; out of sample the "profit" disappears ([case 1](audits/case-01-stock-prediction-models.md)) |
+| **Revised data as if known** | Macro series downloaded today carry revisions the trader never saw | Direction of the monthly change differs from the first print in one month in seven across 18 FRED series; a G.17 industry signal agrees with its first print at 0.53 ([study](revisions/fred-first-print-vs-revised.md)) |
 | **Costs on the wrong price** | Commission or slippage priced on adjusted prices, or not at all | Commission overstated 5× on adjusted closes ([finding 6](README.md)) |
 | **Fills on the deciding bar** | The trade is filled at the close that produced the signal | A standard check in every audit: the result with a one-bar delay |
 

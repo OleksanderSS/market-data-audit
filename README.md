@@ -7,7 +7,7 @@ macro series, news, options, analyst estimates) and tests whether any of it fore
 strategy beat doing nothing. What the project did produce is a set of data defects that would have made
 the opposite look true, each found, measured and fixed with a test that fails on the old code.
 
-This repository is a curated extract. The full working repository (1,174 commits, Ukrainian-language
+This repository is a curated extract. The full working repository (1,391 commits, Ukrainian-language
 research log) is private; the excerpts here are unchanged apart from removed paths and credentials.
 
 ## Findings
@@ -38,6 +38,7 @@ The same instruments, applied to public code. Each case is pre-registered, repor
 |---|---|
 | [Today's S&P 500 list, backtested](survivorship/sp500-todays-list.md) | A backtest on today's 503 members beats the index as it was (dead members included) by **+5.1 points a year in 2018–2026 and +5.6 in 2013–2017** (t 6.8 and 5.6, every year). Split: the list knows the winners (+3.1 / +5.4) and skips the index's turnover (+2.0 / +0.2). Pre-registered, four known-answer controls; a first attempt's failed mirror is reported, not hidden. |
 | [Prediction-market calibration](prediction_markets/README.md) | Long shots priced 2–15 cents a week before close win 5.0% of the time at a price of 6.2% on Polymarket (real money, 1,102 contracts, clustered z +1.92) and 5.1% at 6.5% on Manifold (play money, z +1.93): the favourite–longshot bias, the same size on both. Pre-registered, four known-answer controls. |
+| [Revised macro data, backtested as if known](revisions/fred-first-print-vs-revised.md) | A feature built from today's FRED is not the one a trader saw: 25 industry growth lines (G.17) ranked from the revised data agree with the first print at a rank correlation of **0.53**; for 18 headline series the direction of the monthly change differs in **about one month in seven** (one in five for industrial production, durable-goods orders, continuing claims). Pre-registered, four known-answer controls; the headline correlation I first pre-registered (0.955) is carried by 2020 and is reported as such. |
 
 ## How the work is verified
 
@@ -45,7 +46,7 @@ The same instruments, applied to public code. Each case is pre-registered, repor
   known-answer control are committed to the instrument file. The commit hash proves the order.
 - **Known-answer controls.** Every instrument runs beside a case whose answer is known; a control that only
   just passes is counted as failed.
-- **Nightly gate.** An unattended run every night: 918 contract tests, a ratchet that fails on any new unit-test
+- **Nightly gate.** An unattended run every night: 939 contract tests, a ratchet that fails on any new unit-test
   failure, collection health for each data source, and a morning report.
 - **Own forecasts are scored.** Each predicted effect size is written down first and scored afterwards; on
   the latest day 5 of 9 were right, and every miss on size underestimated the leak.
@@ -81,6 +82,7 @@ Commit hashes refer to the private working repository.
 | `point_in_time/fundamentals_filed_clock_535.py` | the same check for 10-K/10-Q facts |
 | `point_in_time/fundamentals_enricher.py`, `test_fundamentals_enricher_is_point_in_time.py` | the fix for fundamentals, and the tests that were red on the old code |
 | `survivorship/what_survivorship_is_worth_in_our_own_data.py` | finding 3: what the hand-picked universe is worth with no model at all |
+| `revisions/revision_distance_catalog_628.py`, `test_revision_distance_catalog_628.py` | the revisions catalog: first print against today's vintage, with its known-answer tests |
 | `verification/nightly_gate.py`, `test_nightly_gate_report.py` | the nightly run and its report (the report itself is written in Ukrainian) |
 | `verification/test_no_env_value_is_tracked.py` | no value from the local `.env` may sit in a tracked file, with a planted-key control |
 
