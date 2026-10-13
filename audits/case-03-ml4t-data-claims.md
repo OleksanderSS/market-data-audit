@@ -1,5 +1,7 @@
 # Audit case 3: "Machine Learning for Trading" — two data claims, one holds
 
+> **Update, 13 October 2026 — confirmed and fixed by the author.** Stefan Jansen reproduced the second finding independently against live EDGAR (109 of 118 paired facts carry a later filing than the one dating the row — all of them later, gaps up to twelve months) and wrote that "the consequence is worse than the issue states". The same lead turned up two more defects in that path. The fix is merged ([issue #1158](https://github.com/stefan-jansen/machine-learning-for-trading/issues/1158), [PR #1161](https://github.com/stefan-jansen/machine-learning-for-trading/pull/1161)). The text below is the audit as published before that reply.
+
 *An independent check of a public repository, done with the same instruments and rules this project uses on
 its own data. The repository is the code of a widely read book, shared openly under MIT; this case tests two
 statements the code makes about its own data. One holds and one does not, and neither changes a published
