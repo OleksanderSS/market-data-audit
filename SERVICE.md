@@ -35,11 +35,19 @@ looking for and what I expect; the report says which expectations failed, includ
 
 ## Scope and price
 
-- **Pilot — $150 fixed**, one strategy, for the first three clients (in exchange for permission to publish an
-  anonymised case).
-- **Standard — $300–500**, one strategy, depending on the data involved (one asset vs a universe of stocks,
-  daily vs intraday).
-- Turnaround: typically 3–5 working days from receiving runnable code and data.
+- **Free sample — one public backtest.** You pick one public repository that runs on public data. I run five fixed
+  checks: time-of-day look-ahead, universe survivorship, price type and costs, a one-bar delay, train/test overlap
+  and temporal leakage. This is a standard first set, not a guarantee of finding every kind of error, and the
+  report states the result even when nothing is found. You get a 1–2 page report within 5 working days of the
+  choice, with one round of questions. If the code does not run or needs private data, the sample is a desk review
+  of the description and says so. One sample per firm. I may publish the report naming the public repository; your
+  firm is not named without separate written consent.
+- **Pilot — $150 fixed**, one private strategy, for the first three clients (permission to publish an anonymised case).
+- **Standard — $300–500**, one strategy: the five checks above plus the out-of-sample result, costs on traded prices
+  and a one-bar delay, with reproducing scripts. Paid data, if needed, is quoted and agreed in writing before I buy
+  it; extra work beyond the agreed scope only with your prior consent.
+- Turnaround: counted from receiving runnable code and data (for a desk review, from agreeing the description and
+  scope), 3–5 working days; a desk review from a description alone measures effects only where public data allows.
 
 ## Contact
 
