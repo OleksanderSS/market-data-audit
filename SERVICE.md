@@ -21,16 +21,23 @@ Every finding comes with a **measured effect** — your result as shown, then th
 fixed. A defect I cannot measure is reported as such and not counted. Before running, I write down what I am
 looking for and what I expect; the report says which expectations failed, including mine.
 
-## What I need from you
+## What I need from you — five questions before any work
 
-- The code (repository or archive) and how to run it.
-- The data it uses, or where it comes from.
-- The result you are relying on (return, Sharpe, a chart).
+1. **The decision and the deadline** — what you will do differently depending on the result, and by when.
+2. **One headline claim** — the number or statement you rely on (a return, a Sharpe, "no look-ahead").
+3. **The minimum to reproduce it** — the code and how to run it, the data or where it comes from.
+4. **Your right to share it** — that you may pass this code and data to a third party, and how long I may keep
+   them (deleted after delivery unless agreed otherwise).
+5. **In and out of scope** — what the report covers and what it does not.
+
+If the first two have no answer yet, we start with a short call instead of a quote.
 
 ## What you get
 
-- A report in the format of the public cases: a table of findings, each with where it is in the code and how
-  much it changes the result; the result out of sample, with costs, with a one-bar delay, against buy-and-hold.
+- A report in the format of the [sample report](audits/sample-report.md): the decision it supports, a verdict in
+  one paragraph, a table of findings each marked **Measured**, **Read in code** or **Not measured**, the denominator
+  next to every headline number, the controls with a known answer, and how to check the fix.
+- The result out of sample, with costs, with a one-bar delay, against buy-and-hold, where these apply.
 - The scripts that reproduce every number.
 
 ## Scope and price
